@@ -1,0 +1,15 @@
+include ../../../node_modules/bemto.pug/bemto.pug
+include ../template/link.pug
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(title="index")
+        +style()
+        +script()
+    body.body
+        include ../template/menu
+        +b.container
+            include ../template/submenu
+            include ../template/info
+            include ../template/booking

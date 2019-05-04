@@ -1,0 +1,86 @@
++b.booking
+    +b.breadcrumbs
+        +e('a')(href="#").element Главная
+        +e('img')(src="../../assets/images/breadcrumps_next.png").next
+        +e('a')(href="#").element Услуги
+        +e('img')(src="../../assets/images/breadcrumps_next.png").next
+        +e('a')(href="#").element Заказ и бронирование авиабилетов
+    +e.block
+        +e.title Бронирование авиабилетов
+        +e('a')(href="#").info Посмотреть инструкцию по бронированию
+        +e.description Вводный текст, где мы должны написать что даёт возможность заказывать билеты именно через нас. Вводный текст, где мы должны написать что даёт возможность заказывать билеты именно через нас. Вводный текст, где мы должны написать что даёт возможность заказывать билеты именно через нас.
+    +b.slider.carousel
+        +e.block
+            +e.special-background
+                +e.special Спецпредложение!
+        +e.block
+            +e.special-background
+                +e.special Спецпредложение!
+        +e.block
+            +e.special-background
+                +e.special Спецпредложение!
+    +b.steps
+        +e.block Выбор рейса
+        +e('img')(src="../../assets/images/steps-next.png").next
+        +e.block Информация о пассажирах
+        +e('img')(src="../../assets/images/steps-next.png").next
+        +e.block Оформление
+        +e('img')(src="../../assets/images/steps-next.png").next
+        +e.block Результаты бронирования
+    +b('form').form
+        +b.block1
+            +e.column
+                +e.label Город вылета
+                +e('input')(placeholder="Чита").input#city-in
+                +b.dropdown#dropdown-city-in
+                    +e.element
+                        +e.title Чита (Россия)
+                        +e.code hta
+                    +e.element
+                        +e.title Читато (Ангола)
+                        +e.code gra
+                +e('input')(type="text", placeholder="Введите дату").input-date#date-in
+            +e.column.padding
+                +e.label Город назначения
+                +e('input')(placeholder="Москва").input#city-to
+                +b.dropdown#dropdown-city-to
+                    +e.element
+                        +e.title Москва/Внуково
+                        +e.code vko
+                    +e.element
+                        +e.title Москва/Домодедово
+                        +e.code dme
+                +e('input')(type="text", placeholder="Введите дату").input-date#date-to
+            +e('input')(type="checkbox").checkbox#one-way
+            +e('label')(for="one-way").checkbox-label В одну сторону
+            //+e('label').label Город вылета
+        +b.block2
+            +e.column
+                +e.label Количество пассажиров
+                +e('select').select#select-adults Взрослые
+                    +e('option').option Взрослые
+                    +e('option').option 1
+                    +e('option').option 2
+                    +e('option').option 3
+                    +e('option').option 4
+                    +e('option').option 5
+                +e('select').select#select-children Дети
+                    +e('option').option Дети
+                    +e('option').option 1
+                    +e('option').option 2
+                    +e('option').option 3
+                    +e('option').option 4
+                    +e('option').option 5
+                +e('select').select#select-toddlers Младенцы
+                    +e('option').option Младенцы
+                    +e('option').option 1
+                    +e('option').option 2
+                    +e('option').option 3
+                    +e('option').option 4
+                    +e('option').option 5
+            +e.column
+                +e.label Класс
+                +e('select').select#select-class Эконом
+                    +e('option') Эконом
+                    +e('option') Бизнес
+                    +e('option') Первый

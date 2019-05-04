@@ -1,0 +1,40 @@
+//+b.container
++b.submenu
+    +e.title Карта сайта
+    +b.tabs
+        +b.plane
+            +e('img')(src="../../assets/images/plane.png").icon
+            +e.title Авиабилеты
+            +e.subtitle Услуги
+            +e.links
+                +e('a')(href="#").item Аэроэкспресс
+                +e('a')(href="#").item Гостиницы
+                +e('a')(href="#").item Такси
+                +e('a')(href="#").item Автобусы
+                +e('a')(href="#").item Страхование
+                +e('a')(href="#").item Корпоративное обслуживание
+        +b.train
+            +e('img')(src="../../assets/images/train.png").icon
+            +e.title Ж\Д билеты
+            +e.subtitle Компания
+            +e.links
+                +e('a')(href="#").item О компании
+                +e('a')(href="#").item Офисы продаж
+                +e('a')(href="#").item Контактная информация
+        +b.search
+            +e('img')(src="../../assets/images/magnifier.png").icon
+            +e.title Поиск тура
+            +e.subtitle Сервисы
+            +e.links
+                +e('a')(href="#").item Новости
+                +e('a')(href="#").item Вопросы-ответы
+                +e('a')(href="#").item Справочники
+    +b('hr').hr
+    +e.footer
+        +e.text Если у вас появились вопросы, звоните нам по телефонам:
+        +e.telephone +7 (3022) 45-05-05
+        +e('a')(href="#").faq Вопросы-ответы
+        //+b.subtitles
+        //    +e.item Услуги
+        //    +e.item Компания
+        //    +e.item Сервисы

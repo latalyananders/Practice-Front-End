@@ -1,0 +1,39 @@
+.banner{
+
+  &__block{
+    background-image: url("../../assets/images/banner1.png");
+    height: 172px;
+    padding-left: 430px;
+    padding-top: 110px;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 0 !important;
+  }
+
+  &__text{
+    font-size: 16px;
+    font-family: Arial;
+    color: #db214f;
+    line-height: 1.125;
+    display: inline-block;
+    margin-right: 5px;
+
+  }
+
+  &__price{
+    font-size: 24px;
+    color: #fff;
+    background-color: #db214f;
+    padding: 5px 11px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+}
+
+.banner1{
+  background-image: url("../../assets/images/banner1.png");
+}
+
+.banner2{
+  background-image: url("../../assets/images/banner2.png");
+}

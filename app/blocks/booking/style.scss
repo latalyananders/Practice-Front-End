@@ -1,10 +1,11 @@
 .booking{
   margin-top: 4px;
-  width: 720px;
+  width: 719px;
   padding-top: 20px;
   padding-bottom: 25px;
   border-radius: 10px;
   margin-right: 4px;
+  margin-bottom: 4px;
   display: inline-block;
   background-color: #fff;
   padding-left: 30px;
@@ -70,6 +71,7 @@
   &__next{
     display: inline-block;
     margin: 0 5px;
+    vertical-align: baseline;
   }
 }
 
@@ -91,9 +93,6 @@
   }
 
   &__special-background{
-    //border-style: solid;
-    //border-width: 1px;
-    //border-color: rgb(219, 33, 79);
     border-radius: 6px;
     background-color: rgba(255, 220, 129, .4);
     //opacity: 0.38;
@@ -221,7 +220,7 @@ li.slick-active > button{
     font-weight: bold;
     transition-timing-function: ease;
     transition-duration: .2s;
-    cursor: default;
+    cursor: pointer;
 
     &:hover{
       background-color: #ffdae3;
@@ -248,6 +247,7 @@ li.slick-active > button{
   background-color: #ffd25b;
   border-radius: 10px;
   box-shadow: 3px 3px 4px 1px rgba(0,0,0,.4);
+  margin-bottom: 30px;
 }
 
 .padding{
@@ -259,6 +259,8 @@ li.slick-active > button{
 .block1{
 
   //width: 535px;
+  visibility: collapse;
+  height: 0;
 
   &__checkbox{
     //display: block;
@@ -282,7 +284,6 @@ li.slick-active > button{
     font-family: "Arial";
     color: rgb(102, 102, 102);
     font-style: italic;
-    //line-height: 1.2;
 
     &:before{
       content: '';
@@ -419,6 +420,10 @@ li.slick-active > button{
 
 .visible{
   overflow: visible;
+  //height: 0;
+  height: auto !important;
+
+  //display: block;
 }
 
 ::-webkit-inner-spin-button {
@@ -502,6 +507,9 @@ li.slick-active > button{
 
 .block2{
 
+  visibility: collapse;
+  height: 0;
+
   &__column{
     display: inline-block;
   }
@@ -513,51 +521,12 @@ li.slick-active > button{
     font-weight: bold;
   }
 
-  &__select{
-    //width: 128px !important;
-    //margin-top: 10px;
-    //padding: 10px;
-    //font-size: 19px;
-    //font-family: Arial;
-    //color: #999;
-    //line-height: 1.2;
-    //border-radius: 10px;
-    //border: 1px solid #c1bfb7;
-    //-webkit-box-shadow: inset 1px 1px 4px 1px rgba(0,0,0,0.21);
-    //-moz-box-shadow: inset 1px 1px 4px 1px rgba(0,0,0,0.21);
-    //box-shadow: inset 1px 1px 4px 1px rgba(0,0,0,0.3);
-    //cursor: pointer;
-    //background-image: url("../../assets/images/select-background.png");
-    //background-repeat: no-repeat;
-    //background-position: 105px;
-    //appearance: none;
-
-  }
-
   &__option{
     text-align: center;
   }
 }
 
 .ui-selectmenu-button{
-  //width: 128px !important;
-  //margin-top: 10px;
-  //padding: 10px;
-  //font-size: 19px;
-  //font-family: Arial;
-  //color: #999;
-  //line-height: 1.2;
-  //border-radius: 10px;
-  //border: 1px solid #c1bfb7;
-  //-webkit-box-shadow: inset 1px 1px 4px 1px rgba(0,0,0,0.21);
-  //-moz-box-shadow: inset 1px 1px 4px 1px rgba(0,0,0,0.21);
-  //box-shadow: inset 1px 1px 4px 1px rgba(0,0,0,0.3);
-  //cursor: pointer;
-  //background-image: url("../../assets/images/select-background.png");
-  //background-repeat: no-repeat;
-  //background-position: 105px;
-  //appearance: none;
-
   width: 137px!important;
   /* margin-top: 10px; */
   padding: 10px;
@@ -615,13 +584,147 @@ li.slick-active > button{
   color: #999;
   font-size: 19px;
   text-align: center;
-  //background-color: #1392d7;
-  //border: none;
-  //color: white;
 }
 
 li > .ui-state-active{
   background-color: #1392d7 !important;
   border: none !important;
   color: white !important;
+}
+
+#radio-card, #radio-cash, #radio-no-cash{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+#radio-card:hover + .block3__label:before{
+  background-color: #d7204d;
+  text-decoration: none;
+  transition-timing-function: ease;
+  transition-duration: .2s;
+}
+
+#radio-cash:hover + .block3__label:before{
+  background-color: #d7204d;
+  text-decoration: none;
+  transition-timing-function: ease;
+  transition-duration: .2s;
+}
+
+#radio-no-cash:hover + .block3__label:before{
+  background-color: #d7204d;
+  text-decoration: none;
+  transition-timing-function: ease;
+  transition-duration: .2s;
+}
+
+#radio-card:checked + .block3__label:before{
+  background-color: #2fa5e0;
+  text-decoration: none;
+  transition-timing-function: ease;
+  transition-duration: .2s;
+}
+
+#radio-cash:checked + .block3__label:before{
+  background-color: #2fa5e0;
+  text-decoration: none;
+  transition-timing-function: ease;
+  transition-duration: .2s;
+}
+
+#radio-no-cash:checked + .block3__label:before{
+  background-color: #2fa5e0;
+  text-decoration: none;
+  transition-timing-function: ease;
+  transition-duration: .2s;
+}
+
+.block3{
+
+  visibility: collapse;
+  height: 0;
+
+  &__title{
+    font-size: 14px;
+    font-family: Arial;
+    color: #626262;
+    line-height: 1.286;
+    text-align: left;
+    display: inline-block;
+  }
+
+  &__label{
+    font-size: 14px;
+    font-family: "Arial";
+    color: rgb(98, 98, 98);
+    line-height: 1.286;
+    font-style: italic;
+    margin-left: 33px;
+    cursor: pointer;
+
+    &:before{
+      content: '';
+      padding: 7px;
+      font-size: 0;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: inset 1px 1px 4px 1px rgba(0,0,0,.3);
+      position: relative;
+      top: -5px;
+      right: 7px;
+      text-decoration: none;
+      transition-timing-function: ease;
+      transition-duration: .2s;
+    }
+
+  }
+
+  &__button {
+    background-image: linear-gradient(to bottom, #51b6e5, #1689ca);
+    border: 3px solid #c3dae3;
+    font-size: 16.667px;
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    padding: 10px 25px;
+    border-radius: 10px;
+    display: inline-block;
+
+    &:hover {
+      background-image: none;
+      background-color: #51b6e5;
+    }
+
+    &:active {
+      background-image: linear-gradient(to top, #51b6e5, #1689ca);
+    }
+  }
+
+}
+
+.block4{
+  //visibility: collapse;
+  //height: 0;
+
+  //display: none;
+  white-space: pre;
+  font-size: 16.667px;
+  font-family: Arial;
+  line-height: 1.2;
+
+  color: #000;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 25px;
+  border: 1px solid;
+  margin-bottom: 30px;
+}
+
+.hidden{
+  display: none;
+}
+
+.not-hidden{
+  display: block;
 }

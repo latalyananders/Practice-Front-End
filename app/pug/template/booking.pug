@@ -20,15 +20,15 @@
             +e.special-background
                 +e.special Спецпредложение!
     +b.steps
-        +e.block Выбор рейса
+        +e.block.active#step1 Выбор рейса
         +e('img')(src="../../assets/images/steps-next.png").next
-        +e.block Информация о пассажирах
+        +e.block#step2 Информация о пассажирах
         +e('img')(src="../../assets/images/steps-next.png").next
-        +e.block Оформление
+        +e.block#step3 Оформление
         +e('img')(src="../../assets/images/steps-next.png").next
-        +e.block Результаты бронирования
-    +b('form').form
-        +b.block1
+        +e.block#step4 Результаты бронирования
+    +b.form#form
+        +b.block1.visible#block1
             +e.column
                 +e.label Город вылета
                 +e('input')(placeholder="Чита").input#city-in
@@ -54,25 +54,25 @@
             +e('input')(type="checkbox").checkbox#one-way
             +e('label')(for="one-way").checkbox-label В одну сторону
             //+e('label').label Город вылета
-        +b.block2
+        +b.block2#block2
             +e.column
                 +e.label Количество пассажиров
                 +e('select').select#select-adults Взрослые
-                    +e('option').option Взрослые
+                    +e('option')(value="0").option Взрослые
                     +e('option').option 1
                     +e('option').option 2
                     +e('option').option 3
                     +e('option').option 4
                     +e('option').option 5
                 +e('select').select#select-children Дети
-                    +e('option').option Дети
+                    +e('option')(value="0").option Дети
                     +e('option').option 1
                     +e('option').option 2
                     +e('option').option 3
                     +e('option').option 4
                     +e('option').option 5
                 +e('select').select#select-toddlers Младенцы
-                    +e('option').option Младенцы
+                    +e('option')(value="0").option Младенцы
                     +e('option').option 1
                     +e('option').option 2
                     +e('option').option 3
@@ -84,3 +84,15 @@
                     +e('option') Эконом
                     +e('option') Бизнес
                     +e('option') Первый
+        +b.block3#block3
+            +e.title Оплата с:
+            +e('input')(type="radio", name='billing')#radio-card
+            +e('label')(for='radio-card').label Пластиковая карта
+            +e('input')(type="radio", name='billing')#radio-cash
+            +e('label')(for='radio-cash').label Наличные
+            +e('input')(type="radio", name='billing')#radio-no-cash
+            +e('label')(for='radio-no-cash').label Безналичный расчёт
+            +e.button#button Готово
+    +b.block4#block4.hidden
+    include banner
+    include table

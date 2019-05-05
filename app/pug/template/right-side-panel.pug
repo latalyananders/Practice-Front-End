@@ -1,0 +1,33 @@
++b.right-side-panel
+    +e.tabs
+        +e.tabs-container
+            +e.tab.active-tab Заказ билетов
+            +e.tab Расписание рейсов
+    +b.where-buy
+        +e.container
+            +e.title Узнать где купить
+            +e.description У нас 16 офисов продаж, где вы можете купить билеты и получить консультации наших специалистов.
+            +e('a')(href='#').link Пункты продаж билетов
+            +e(src="../../assets/images/house.png").image
+    +b.make-request
+        +e.container
+            +e.title Оставьте нам заявку
+            +e.description Оставьте нам сообщение с вашими потребностями и наши консультанты сами подберут вам лучшие условия и свяжутся с вами в течение 3-6 часов.
+            +e('form')
+                +e('input')(placeholder="Как вас зовут").input
+                +e('input')(placeholder="Контактный телефон").input
+                +e('textarea')(placeholder="Что вас интересует?", rows='3').textarea
+                +e('input')(type='submit').submit Отправить
+    +b.services
+        +e.container
+            +e.title Услуги
+            +e('a')(href='#').item.service1 Аэроэкспресс
+            +e('a')(href='#').item.service2 Гостиницы
+            +e('a')(href='#').item.service3 Такси
+            +e('a')(href='#').item.service4 Автобусы
+            +e('a')(href='#').item.service5 Страхование
+    +b.good-to-know
+        +e.container
+            +e.title Полезно знать
+            +e('a')(href='#').item.good-to-know1 Авиакомпании
+            +e('a')(href='#').item.good-to-know2 Аэропорты

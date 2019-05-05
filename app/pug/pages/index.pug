@@ -7,9 +7,15 @@ html
         meta(title="index")
         +style()
         +script()
-    body.body
-        include ../template/menu
-        +b.container
+    body
+        //+b gfr
+        +b.menu-group
+            include ../template/menu
+            //+b.container
             include ../template/submenu
-            include ../template/info
-            include ../template/booking
+        include ../template/info
+        +b.content
+            +e.container
+                include ../template/booking
+                include ../template/right-side-panel
+        include ../template/footer

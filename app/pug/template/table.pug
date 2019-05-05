@@ -1,0 +1,36 @@
++b.table
+    +e.title Чита - Москва (20.08.2013)
+    +e.block
+        +e('table')
+            +e.name Прямые рейсы
+            +e('thead')
+                +e('tr')
+                    +e('td')
+                    +e('td') Рейс
+                    +e('td') Вылет
+                    +e('td') Прилет
+                    +e('td') В пути
+                    +e('td') Самолет
+                    +e('td') Класс
+            +e('tbody')
+                +e('tr')
+                    +e('td')
+                        +e('input')(type='radio', name='flight')#radio1
+                        +e('label')(for='radio1').radio
+                    +e('td') S7-120*
+                    +e('td') 08:50 Чита
+                    +e('td') 11:50 Домодедово
+                    +e('td') 9:00
+                    +e('td') БОИНГ 737-800
+                    +e('td') Э / 4
+                +e('tr')
+                    +e('td').left-angle
+                        +e('input')(type='radio', name='flight').radio#radio2
+                        +e('label')(for='radio2').radio
+                    +e('td') S7-120*
+                    +e('td') 08:50 Чита
+                    +e('td') 11:50 Домодедово
+                    +e('td') 9:00
+                    +e('td') БОИНГ 737-800
+                    +e('td') Э / 4
+    +e.info * - рейсы с посадкой
